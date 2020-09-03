@@ -1,6 +1,6 @@
 export default (arr) => {
   //卡牌排序
-  let str = arr.sort().join('')
+  let str = arr.sort((a, b) => a - b).join('')
   //分组(单张或多张)
   let group = str.match(/(\d)\1+|\d/g)
   let gcd = (a,b) => {
